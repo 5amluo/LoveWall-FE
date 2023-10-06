@@ -7,6 +7,8 @@ import Easteregg from "../page/Easteregg.vue";
 import Express from "../page/Express.vue";
 import {ElNotification} from "element-plus";
 import Change from "../page/Change.vue";
+import Talking from "../page/Talking.vue";
+import Information from "../page/Information.vue";
 
 
 
@@ -62,7 +64,18 @@ const routes = [
         path:"/Change",
         name:"Change",
         component: Change
+    },
+    {
+        path:"/Talking",
+        name:"Talking",
+        component: Talking
+    },
+    {
+        path:"/Information",
+        name:"Information",
+        component:Information
     }
+
 ];
 
 

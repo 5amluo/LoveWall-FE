@@ -1,4 +1,5 @@
 <template>
+  <sidebar></sidebar>
   <div class="parent">
     <div class="child">
       <h2 class="glowing-text">
@@ -43,6 +44,8 @@ import {ref,reactive,h} from "vue";
 import { ElNotification } from "element-plus";
 import addStore from "../store/addStore.js";
 import axios from "axios";
+import sidebar from "../components/sidebar.vue";
+
 
 const NewaddStore = addStore();
 

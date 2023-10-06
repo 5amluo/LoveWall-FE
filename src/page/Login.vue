@@ -70,7 +70,7 @@ const onSubmit = async () => {
       localStorage.setItem('isLogin', 'true');
       ElNotification({
         title: "登陆成功！",
-        message: h("i", { style: "color: teal" }, "欢迎回到心动频率局！"),
+        message: h("i", { style: "color: teal" }, "欢迎来到心动频率局！"),
       });
       NewloginStore.setLogin(true);//登录状态存储
       NewuserStore.setUserInfo(res.value);//用户信息存储

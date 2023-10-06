@@ -1,4 +1,5 @@
 <template>
+  <sidebar></sidebar>
   <div class="shell">
     <ul class="images" :style="{ left: (index * -100) + '%' }">
       <li v-for="(img, idx) in images" :key="idx" class="img" :style="{backgroundImage: 'url(' + img + ')'}"></li>
@@ -17,6 +18,7 @@
 
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue';
+import sidebar from "../components/sidebar.vue";
 
 const time = ref(null);
 const index = ref(0);
