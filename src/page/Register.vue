@@ -36,8 +36,6 @@
 
 
 
-
-
       <el-form-item>
         <el-button type="primary" @click="submitForm">注册</el-button>
         <el-button @click="resetForm">重置</el-button>
@@ -74,7 +72,7 @@ const ruleForm = reactive({
   username: ''
 })
 const validatePass = (rule, value, callback) => {
-  if (value !== ruleForm.pass) {
+  if (value !== ruleForm.password) {
     callback(new Error('两次密码不一致!'));
   } else {
     callback();
@@ -82,7 +80,7 @@ const validatePass = (rule, value, callback) => {
 };
 const rules = reactive({
   username: [{ required: true, message: '请输入用户名', trigger: 'blur' }],
-  pass: [{ required: true, message: '请输入密码', trigger: 'blur' }],
+  password: [{ required: true, message: '请输入密码', trigger: 'blur' }],
   checkPass: [
       { required: true, message: '请再次输入密码', trigger: 'blur' },
       { validator: validatePass, trigger: 'blur' }
