@@ -71,6 +71,7 @@ const ruleForm = reactive({
   checkPass: '',
   username: ''
 })
+
 const validatePass = (rule, value, callback) => {
   if (value !== ruleForm.password) {
     callback(new Error('两次密码不一致!'));
@@ -78,6 +79,7 @@ const validatePass = (rule, value, callback) => {
     callback();
   }
 };
+
 const rules = reactive({
   username: [{ required: true, message: '请输入用户名', trigger: 'blur' }],
   password: [{ required: true, message: '请输入密码', trigger: 'blur' }],
@@ -101,6 +103,13 @@ const ruleForm1 = reactive({
 //注册中
 const res = ref(null);
 const submitForm = async () => {//逻辑要改
+  if(ruleForm.password !== ruleForm.checkPass || ruleForm.account === "" || ruleForm.username ===""){
+    ElNotification({
+      title: "输入错误！",
+      message: h("i", { style: "color: teal" }, "请确保填完所有信息以及保证两次密码一致！"),
+    });
+    return;
+  }else{
   try{
     const response = await axios.post("https://mock.apifox.cn/m1/3336188-0-default/api/user/reg",ruleForm1.value);
     res.value = response.data;
@@ -125,8 +134,7 @@ const submitForm = async () => {//逻辑要改
     if (error.response) {
       console.log(error.response.data);
     }
-}}
-
+}}}
 
 //stores
 

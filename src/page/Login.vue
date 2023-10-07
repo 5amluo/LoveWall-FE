@@ -50,6 +50,7 @@ const form = reactive({
   account: '',
   password: '',
 })
+
 const rules = reactive({
   password: [{ required: true, message: '请输入密码', trigger: 'blur' }],
   account: [{ required: true, message: '请输入账号', trigger: 'blur' }],
@@ -60,11 +61,16 @@ const rules = reactive({
 const res = ref(null); // 使用 ref 创建响应式引用,接收数据返回
 
 const onSubmit = async () => {
+  if(form.account === "" || form.password ===""){
+    ElNotification({
+      title: "输入错误！",
+      message: h("i", { style: "color: teal" }, "请确保填入完整信息！"),
+    });
+  }else{
   try {
     const response = await axios.post("https://mock.apifox.cn/m1/3336188-0-default/api/user/login", form.value);
     res.value = response.data;
     console.log(res.value );
-
 
     if(res.value.msg === "ok" && res.value.code === 200){
       localStorage.setItem('isLogin', 'true');
@@ -97,8 +103,8 @@ const onSubmit = async () => {
     console.error(error);
     if (error.response) {
       console.log(error.response.data);
-    }
-}}
+    }}}
+}
 
 //store？
 
