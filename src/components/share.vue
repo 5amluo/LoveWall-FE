@@ -1,0 +1,49 @@
+<template>
+    <!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+
+    <title>3D分层按钮的悬停效果</title>
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <div class="icon-box">
+        <a href="#">
+            <div class="layer">
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i class="fa fa-qq" aria-hidden="true"></i>
+            </div>
+            <div class="text">QQ</div>
+        </a>
+        <a href="#">
+            <div class="layer">
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i class="fa fa-weixin" aria-hidden="true"></i>
+            </div>
+            <div class="text">微信</div>
+        </a>
+            
+    </div>
+</body>
+
+</html>
+</template>
+
+<script>
+import "../CSS/38.css";
+</script>
+
+<style>
+
+</style>

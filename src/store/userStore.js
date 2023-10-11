@@ -19,7 +19,7 @@ const userStore = defineStore(
             motto:"",
             birthday:"",
             constellation:"",
-
+            email:"",
         });
 
         const setUserInfo = (info) => {
@@ -31,6 +31,7 @@ const userStore = defineStore(
             userSession.motto = info.motto;
             userSession.birthday = info.birthday;
             userSession.constellation = info.constellation;
+            userSession.email = info.email;
         };
 
 
