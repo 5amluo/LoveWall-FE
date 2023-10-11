@@ -9,7 +9,7 @@ import {ElNotification} from "element-plus";
 import Change from "../page/Change.vue";
 import Talking from "../page/Talking.vue";
 import Information from "../page/Information.vue";
-
+import Description from "../page/Description.vue";
 
 
 const routes = [
@@ -74,8 +74,12 @@ const routes = [
         path:"/Information",
         name:"Information",
         component:Information
-    }
-
+    },
+    {
+        path:"/Description",
+        name:"Description",
+        component:Description
+    },
 ];
 
 
