@@ -10,6 +10,7 @@ import Change from "../page/Change.vue";
 import Talking from "../page/Talking.vue";
 import Information from "../page/Information.vue";
 import Description from "../page/Description.vue";
+import Piano from "../page/Piano.vue";
 
 
 const routes = [
@@ -80,6 +81,11 @@ const routes = [
         name:"Description",
         component:Description
     },
+    {
+        path:"/Piano",
+        name:"Piano",
+        component:Piano,
+    }, 
 ];
 
 
