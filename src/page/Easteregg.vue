@@ -1,4 +1,5 @@
 <template>
+   <div v-click-effect>
   <sidebar></sidebar>
   <div class="shell">
     <ul class="images" :style="{ left: (index * -100) + '%' }">
@@ -13,6 +14,7 @@
     </div>
   </div>
   <div class="bg"></div>
+   </div>
 </template>
 
 

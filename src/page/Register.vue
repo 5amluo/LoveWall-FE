@@ -1,4 +1,5 @@
 <template>
+   <div v-click-effect>
   <div class="container">
     <div class="title">用户注册</div>
     <el-form
@@ -47,7 +48,7 @@
 
   </div>
 
-
+   </div>
 </template>
 
 <script setup>
