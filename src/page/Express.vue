@@ -1,5 +1,6 @@
 <template>
-  <sidebar></sidebar>
+  <div v-click-effect>
+ <sidebar></sidebar>
   <div class="parent">
     <div class="child">
       <h2 class="glowing-text">
@@ -36,6 +37,7 @@
       </nav>
 
     </div>
+  </div>
   </div>
 </template>
 

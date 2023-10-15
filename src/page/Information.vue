@@ -6,10 +6,12 @@ import myself from "../components/myself.vue";
 
 
 <template>
-  <sidebar></sidebar>
+  <div v-click-effect>
+ <sidebar></sidebar>
   <h1>个人信息</h1>
   <share></share>
   <myself></myself>
+  </div>
 </template>
 
 <style scoped>

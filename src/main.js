@@ -9,6 +9,11 @@ import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 
 import {createPinia} from 'pinia'
 
+import clickEffect from './mixins/clickEffect'
+
+
+
+
 
 
 
@@ -27,3 +32,5 @@ app.use(ElementPlus);
 
 app.mount("#app");
 app.use(pinia);
+app.mixin(clickEffect)
+

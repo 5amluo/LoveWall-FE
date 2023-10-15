@@ -1,4 +1,5 @@
 <template>
+   <div v-click-effect>
   <div class="confession-wall">
     <img src="/6cf2db8fece33bd3bf7a54638f065af.jpg" alt="橙汁" class="my-image" />
     <h1 class="title">心动频率局</h1>
@@ -14,6 +15,7 @@
     </div>
 
   </div>
+   </div>
 </template>
 
 <script setup>
